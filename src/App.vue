@@ -9,6 +9,7 @@
 
 <script>
 
+import 'bootstrap/dist/css/bootstrap.css'
 import HeaderVue from './components/Header.vue'
 import MainVue from './components/Main.vue'
 import FooterVue from './components/Footer.vue'
@@ -24,5 +25,9 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+}
 
 </style>
