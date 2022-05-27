@@ -2,7 +2,7 @@
   
   <div id="jumbo" class="d-flex align-items-center">
     <div class="container">
-      <h1>Tech Solutions</h1>
+      <h1>Tech Forum</h1>
       <h4>Discuss the latest technology</h4>
       <a href="#">Get Avada NOW</a>
     </div>
@@ -20,18 +20,23 @@ export default {
 <style scoped lang="scss">
 
 #jumbo{
-  height: 500px;
+  margin-top: 15vh;
+  height: 85vh;
   background-image: url(@/assets/img/home_slider_bg.jpg);
   background-position: center;
-  color: white
+  background-attachment: fixed;
+  color: white;
+  bottom: 0;
 }
+
 
 a, h4, h1{
   margin-bottom: 40px
 }
 
 h1{
-  font-size: 80px;
+  font-size: 120px;
+  font-weight: 700;
 }
 
 h4{
@@ -44,6 +49,7 @@ a{
   font-size: 20px;
   text-decoration: none;
   color: white;
+  font-weight: 600;
 }
 
 </style>

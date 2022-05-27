@@ -34,7 +34,11 @@ export default {
 .azzurro{
   background-color: #27AABE;
   color: white;
-  height: 100px;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
 }
 
 
