@@ -3,9 +3,9 @@
     <BioVue/>
     <LatestTitleVue/>
     <LastestPostsVue/>
-    <BlackBandVue/>
+    <BlackBandVue titleBand="READ OUR BLOG"/>
     <ForumSectionVue/>
-    <BlackBandVue/>
+    <BlackBandVue titleBand="GO TO OUR FORUM"/>
   </div>
 </template>
 
@@ -56,7 +56,11 @@ h2{
 .blackband{
   background-color: black;
   height: 100px;
-  margin: 30px 0;
+  &:hover{
+    background-color: #27AABE;
+    animation-duration: 0.6s;
+    transition-timing-function: ease;
+  }
   h4{
     color: white;
     font-size: 15px;
