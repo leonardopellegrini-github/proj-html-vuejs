@@ -4,7 +4,7 @@
     <div class="container">
       <h1>Tech Forum</h1>
       <h4>Discuss the latest technology</h4>
-      <a href="#">Get Avada NOW</a>
+      <a href="#bio">Get Avada NOW</a>
     </div>
   </div>
 

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row d-flex justify-content-around align-items-center">
         <div class="col-8">
-          <p>© Copyright 2012 - 2022 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</p>
+          <p>© Copyright 2012 - 2022 | Avada Theme by <b>ThemeFusion</b> | All Rights Reserved | Powered by <b>WordPress</b></p>
         </div>
         <div class="col-4 d-flex justify-content-around align-items-center">
           <ul class="social">

@@ -62,6 +62,7 @@ h2{
 .blackband{
   background-color: black;
   height: 100px;
+  transition: all 0.5s ease;
   &:hover{
     background-color: #27AABE;
     animation-duration: 0.6s;

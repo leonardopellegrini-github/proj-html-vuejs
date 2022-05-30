@@ -2,7 +2,7 @@
   <div>
     <div class="grigio">
     <div class="container text-center">
-      <div class="row">
+      <div class="row ">
         <div class="col padd">
           <h3>PHASELLUS EGET METUS</h3>
           <h2>Forum Sections</h2>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center align-items-center">
         <div :key="`icon-${index}`" v-for="(icon, index) in iconeDati"  class="box d-flex justify-content-center align-items-center text-center flex-column">
           <i :class="`${icon.i}`"></i>
           <h4>{{icon.title}}</h4>

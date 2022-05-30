@@ -1,5 +1,5 @@
 <template>
-  <div class="grigiochiaro d-flex justify-content-center align-items-center">
+  <div id="bio" class="grigiochiaro d-flex justify-content-center align-items-center">
     <div class="w-60">
       <div class="col">
         <h3>Avada forum is place to be</h3>
