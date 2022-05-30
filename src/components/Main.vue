@@ -6,6 +6,8 @@
     <BlackBandVue titleBand="READ OUR BLOG"/>
     <ForumSectionVue/>
     <BlackBandVue titleBand="GO TO OUR FORUM"/>
+    <JoinCommVue />
+    <NewsLetterVue />
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import LatestTitleVue from './Main/LatestTitle.vue'
 import LastestPostsVue from './Main/LastestPosts.vue'
 import BlackBandVue from './Main/BlackBand.vue'
 import ForumSectionVue from './Main/ForumSection.vue'
+import JoinCommVue from './Main/JoinComm.vue'
+import NewsLetterVue from './Main/Newsletter.vue'
 
 export default {
   name: 'MainVue',
@@ -24,7 +28,9 @@ export default {
     LatestTitleVue,
     LastestPostsVue,
     BlackBandVue,
-    ForumSectionVue
+    ForumSectionVue,
+    JoinCommVue,
+    NewsLetterVue,
 }
 }
 </script>
