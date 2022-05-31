@@ -3,12 +3,14 @@
     <!--PRIMA PARTE-->
     <div class="container">
       <div class="card-group">
-      <div :class="{'featured w-100 d-flex justify-content-around': articolo.flag}" class="col-4 p-2 carta" :key="`articolo-${indice}`" v-for="(articolo, indice) in articoli">
+      <div :class="{'featured w-100 d-flex justify-content-around mb-4 mt-4': articolo.flag}" class="col-4 p-2 carta" :key="`articolo-${indice}`" v-for="(articolo, indice) in articoli">
        <img v-if="articolo.immagine" :src="require(`@/assets/img/post_feat_img_`+ articolo.immagine+`-700x441.jpg`)"  class="card-img-top"   alt="Card image cap">
        <div  class="card-body">
+         <h3>FEATURED ARTICLE</h3>
          <h4>{{articolo.titolo}}</h4>
-         <p>{{articolo.data}} | {{articolo.commenti}}</p>
+         <p class="data">{{articolo.data}} | {{articolo.commenti}}</p>
          <p class="card-text">{{articolo.testo}}</p>
+         <a href="#">READ MORE <i class="fas fa-arrow-right"></i></a>
        </div>
      </div>
     </div>
@@ -17,9 +19,9 @@
     <!--SECONDA PARTE-->
     <div class="container secondapart">
       <div class="row">
-        <div class="col-8 featured d-flex justify-content-around flex-column">
+        <div id="prefe" class="col-8 featured d-flex justify-content-around flex-column">
         <h3>FEATURED ARTICLE</h3>
-        <h1>Cras Malesuada Et Orci Eget Pharetra</h1>
+        <h4>Cras Malesuada Et Orci Eget Pharetra</h4>
         <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.</p>
         <a href="#">READ MORE <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -136,14 +138,6 @@ export default {
           testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
           feature: false,
         },
-        {
-          immagine: "25",
-          titolo: "Donec facilis sodales leo sit amet laoreet",
-          data: "October 11th, 2015",
-          commenti: "2 Comments",
-          testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
-          feature: false,
-        },
       ]
     }
   }
@@ -152,22 +146,34 @@ export default {
 
 <style lang="scss" scoped>
 
-.none{
+
+h3{
   display: none;
 }
 
-.block{
-  display: block;
+a{
+  display: none;
 }
 
 .featured{
   background-image: url(@/assets/img/featured_article_1_bg.jpg);
   background-size: cover;
-  height: 450px;
+  height: 470px;
   color: white;
   padding: 40px;
   h3{
+    padding-top: 150px;
     color: white;
+    display: block;
+  }
+  .data{
+    display: none;
+  }
+  h4{
+    font-weight: 800;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px
   }
   a{
   padding:20px;
@@ -177,6 +183,7 @@ export default {
   text-decoration: none;
   color: white;
   font-weight: 600;
+  display: block;
   }
   p{
    font-size: 15px; 
@@ -188,6 +195,10 @@ export default {
   #tutorialTitle{
   margin: 0;
 }
+}
+
+#prefe{
+  background-image: url(@/assets/img/featured_article_2_bg.jpg);
 }
 
 .carta{
