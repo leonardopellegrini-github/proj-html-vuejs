@@ -20,16 +20,16 @@
           <h6 class="text-uppercase fw-bold mb-4">
             POPULAR TOPICS
           </h6>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Vivamus pellenteque, felis quis varius
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Donec ornare pretium eget scelisque justo
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
         </div>
@@ -37,19 +37,19 @@
         <!-- COLONNA 3 -->
         <div class="footcol col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4" >
             RECENT TOPICS
           </h6>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Vivamus pellenteque, felis quis varius
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Donec ornare pretium eget scelisque justo
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
         </div>
@@ -59,16 +59,16 @@
           <h6 class="text-uppercase fw-bold mb-4">
             LATEST REPLIES
           </h6>
-          <p>
+          <p ><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Vivamus pellenteque, felis quis varius
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Donec ornare pretium eget scelisque justo
           </p>
-          <p>
+          <p><i class="fa-solid fa-angle-right"></i>
             Morbi vitae dui euismod vulputate sollicitudin
           </p>
         </div>
@@ -90,14 +90,15 @@ export default {
   p{
   &:before{
     position: absolute;
-    font-family: awb-icons;
     font-weight: 300;
-    content: "\f105";
+    font-family: "Font Awesome 6 Free"; 
+  
     margin-left: -12px;
   }
   }
 
 }
+
 
 
 </style>
