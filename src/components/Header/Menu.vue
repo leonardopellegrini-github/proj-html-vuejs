@@ -7,16 +7,10 @@
         <div class="col-4">
           <img src="@/assets/img/logo.png" alt="Logo">
         </div>
-        <div class="col">
+        <div class="col" >
           <ul class="menu d-flex justify-content-around align-items-center">
-            <li>Home</li>
-            <li>Apple</li>
-            <li>Microsoft</li>
-            <li>Android</li>
-            <li>Forums</li>
-            <li>Contact Us</li>
-            <li class="button">Join Us</li>
-            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li :key="`${i}`" :class="{'button' : voceMenu.bottone === true}" v-for="(voceMenu, i) in vociMenu">{{voceMenu.titolo}}</li>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </ul>
         </div>
       </div>
@@ -28,7 +22,45 @@
 
 <script>
 export default {
-  name: 'MenuVue'
+  name: 'MenuVue',
+    data(){
+      return{
+        vociMenu:[
+          {
+            titolo: "Home",
+            bottone: false,
+          },
+          {
+            titolo: "Apple",
+            bottone: false,
+          },
+          {
+            titolo: "Microsoft",
+            bottone: false,
+          },
+          {
+            titolo: "Android",
+            bottone: false,
+          },
+          {
+            titolo: "Forums",
+            bottone: false,
+          },
+          {
+            titolo: "Contact Us",
+            bottone: false,
+          },
+          {
+            titolo: "Join Us",
+            bottone: true,
+          },
+         {
+         //   titolo: "``",
+         //   bottone: false,
+         },
+        ]
+      }
+    }
 }
 </script>
 
@@ -55,10 +87,15 @@ ul{
   }
 }
 
+.menu{
+  height: 15vh;
+}
+
 li{
   text-decoration: none;
    margin-right: 10px;
   display:inline;
 }
+
 
 </style>

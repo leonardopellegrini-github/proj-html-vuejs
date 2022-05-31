@@ -3,27 +3,21 @@
     <!--PRIMA PARTE-->
     <div class="container">
       <div class="card-group">
-      <div class="col-4 p-2 carta" :key="`articolo-${indice}`" :class="{'none' : articolo.feature === true}" v-for="(articolo, indice) in articoli">
-       <img :src="require(`@/assets/img/post_feat_img_`+ articolo.immagine+`-700x441.jpg`)" class="card-img-top"  alt="Card image cap">
+      <div :class="{'featured w-100 d-flex justify-content-around': articolo.flag}" class="col-4 p-2 carta" :key="`articolo-${indice}`" v-for="(articolo, indice) in articoli">
+       <img v-if="articolo.immagine" :src="require(`@/assets/img/post_feat_img_`+ articolo.immagine+`-700x441.jpg`)"  class="card-img-top"   alt="Card image cap">
        <div  class="card-body">
          <h4>{{articolo.titolo}}</h4>
          <p>{{articolo.data}} | {{articolo.commenti}}</p>
          <p class="card-text">{{articolo.testo}}</p>
        </div>
      </div>
-     <div class="col-12 featured d-flex justify-content-around flex-column">
-        <h3>FEATURED ARTICLE</h3>
-        <h1>Cras Malesuada Et Orci Eget Pharetra</h1>
-        <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.</p>
-        <a href="#">READ MORE <i class="fas fa-arrow-right"></i></a>
-     </div>     
     </div>
     </div>
 
     <!--SECONDA PARTE-->
     <div class="container secondapart">
       <div class="row">
-        <div class="col-8 featured">
+        <div class="col-8 featured d-flex justify-content-around flex-column">
         <h3>FEATURED ARTICLE</h3>
         <h1>Cras Malesuada Et Orci Eget Pharetra</h1>
         <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.</p>
@@ -31,7 +25,19 @@
       </div>
       <div class="col">
         <h2>Tutorial & guides</h2>
-        <div class="linearanc" ></div>
+        <div id="tutorialTitle" class="linearanc" ></div>
+        <div>
+        <div class="row mt-4" :key="`articolo-${indice}`" v-for="(tutorial, indice) in tutorials">
+          <div class="col-4">
+         <img :src="require(`@/assets/img/post_feat_img_`+ tutorial.immagine+`-147x118.jpg`)" :alt="tutorial.immagine">
+         
+          </div>
+          <div class="col">
+            <h4>{{tutorial.titolo}}</h4>
+            <p>{{tutorial.data}}</p>
+          </div>          
+        </div>
+        </div>
       </div>
       </div>
     </div>
@@ -43,6 +49,33 @@ export default {
   name: 'LastestPostVue',
    data(){
     return{
+      tutorials:[
+        {
+          immagine: "23",
+          titolo: "Donec ornare pretium eget scelisque justo",
+          data: "October 11th, 2015",
+          commenti: "Comments Off",
+          testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
+          tutorial: true,
+        },
+        {
+          immagine: "20",
+          titolo: "Donec facilis sodales leo sit amet laoreet",
+          data: "October 11th, 2015",
+          commenti: "Comments Off",
+          testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
+          tutorial: true,
+        },
+        {
+          immagine: "22",
+          titolo: "Cras Malesuada Et Orci Eget Pharetra",
+          data: "October 11th, 2015",
+          commenti: "",
+          testo: "In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.",
+          tutorial: true,
+        },
+      ],
+
       articoli:[
         {
           immagine: "25",
@@ -68,6 +101,17 @@ export default {
           testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
           feature: false,
         },
+
+        {
+          immagine: "",
+          titolo: "Donec ornare pretium eget scelisque justo",
+          data: "October 11th, 2015",
+          commenti: "Comments Off",
+          testo: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl",
+          feature: false,
+          flag: true,
+        },
+
         {
           immagine: "22",
           titolo: "Cras Malesuada Et Orci Eget Pharetra",
@@ -106,7 +150,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .none{
   display: none;
@@ -127,7 +171,7 @@ export default {
   }
   a{
   padding:20px;
-  width: 15%;
+  width: 180px;
   background-color: black;
   font-size: 20px;
   text-decoration: none;
@@ -141,6 +185,9 @@ export default {
 
 .secondapart{
   padding: 30px 0px;
+  #tutorialTitle{
+  margin: 0;
+}
 }
 
 .carta{
@@ -150,10 +197,12 @@ export default {
   img:hover{
    border-radius: 20px;
    filter: saturate(200%);
-   filter: sepia(30%);
+   filter: sepia(30%);   
   }
   
 }
+
+
 
 
 
